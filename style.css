@@ -1,0 +1,163 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.cv-container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 900px;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .cv-container {
+        flex-direction: row;
+    }
+}
+
+.sidebar {
+    background-color: #2c3e50;
+    /* Dark blue from template */
+    color: #ecf0f1;
+    /* Light gray text */
+    padding: 32px;
+    width: 100%;
+    /* The border-radius below will be overridden by the .cv-container if on desktop, but fine for mobile */
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Ensures content inside sidebar (like pic, name) is centered horizontally */
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        width: 35%;
+        align-items: flex-start;
+        /* Aligns content to the left for desktop */
+        text-align: left;
+    }
+}
+
+.main-content {
+    padding: 32px;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .main-content {
+        width: 65%;
+    }
+}
+
+.profile-pic-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    /* Changed from 'auto' back to 'hidden' */
+    border: 4px solid #3498db;
+    /* A lighter blue border */
+    margin-bottom: 24px;
+    display: flex;
+    /* Ensure flexbox is used for centering image inside */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    background-color: #bdc3c7;
+    /* Placeholder background */
+    /* Remove position: relative; and left: 40px; from here */
+    position: relative;
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* This is the key change: scales image down to fit entirely */
+    /* Remove redundant centering from here */
+
+
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #ecf0f1;
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #bdc3c7;
+    margin-bottom: 32px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    /* Dark blue for main content headings */
+    margin-bottom: 16px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #3498db;
+    /* Blue underline */
+}
+
+.sidebar h3 {
+    color: #ecf0f1;
+    border-bottom-color: #3498db;
+    margin-top: 24px;
+    text-align: center;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .sidebar h3 {
+        text-align: left;
+    }
+}
+
+.section-item {
+    margin-bottom: 16px;
+}
+
+.section-item p {
+    margin-bottom: 4px;
+}
+
+.bullet-list li {
+    margin-bottom: 8px;
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.link-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+.link-item svg {
+    margin-right: 8px;
+}
+
+.link-item:hover {
+    text-decoration: underline;
+}
